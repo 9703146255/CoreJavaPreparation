@@ -1,0 +1,52 @@
+
+=========================================================================================================
+
+way-1 : // Calls the display method of the Parent class
+way-2 : //super.num we can call super class variables
+way-3 ://to call super class constructor
+
+=========================================================================================================
+way-1 : // Calls the display method of the Parent class
+way-2 : //super.num we can call super class variables
+=========================================================================================================
+class Parent {
+    int num = 10;
+
+    void display() {
+        System.out.println("This is the display method in the Parent class.");
+    }
+}
+
+class Child extends Parent {
+    int num = 20;
+
+    void display() {
+        System.out.println("This is the display method in the Child class.");
+    }
+
+    void accessSuper() {
+        System.out.println("Child num: " + num);
+        System.out.println("Parent num: " + super.num);
+        super.display(); // Calls the display method of the Parent class
+    }
+}
+=========================================================================================================
+way-3 :// Call the constructor of the Parent class
+=========================================================================================================
+class Parent {
+    int x;
+
+    Parent(int x) {
+        this.x = x;
+    }
+}
+
+class Child extends Parent {
+    int y;
+
+    Child(int x, int y) {
+        super(x); // Call the constructor of the Parent class
+        this.y = y;
+    }
+}
+===========================================================================================================
